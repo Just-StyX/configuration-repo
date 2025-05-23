@@ -11,4 +11,4 @@ server:
       min-spare: 5
 
 app:
-  version: "api-v1"
+  version: "api-v2"
