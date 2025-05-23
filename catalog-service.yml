@@ -11,4 +11,19 @@ server:
       min-spare: 5
 
 app:
-  version: "api-v2"
+  version: "api-v1"
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres/polar-bookstore
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+      database: postgresql
