@@ -16,7 +16,7 @@ app:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgres/polar-bookstore
+    url: jdbc:postgresql://postgres/polar_bookstore
     username: username
     password: password
     driver-class-name: org.postgresql.Driver
