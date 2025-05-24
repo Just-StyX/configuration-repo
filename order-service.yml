@@ -9,7 +9,7 @@ spring:
   r2dbc:
     username: username
     password: password
-    url: r2dbc:postgresql://postgres/polar-order
+    url: r2dbc:postgresql://postgres/polar-orders
     pool:
       max-create-connection-time: 2s
       initial-size: 5
