@@ -19,5 +19,8 @@ spring:
     password: ${spring.r2dbc.password}
     url: jdbc:postgresql://postgres/polar_orders
 
+app:
+  version: "order-api-v1"
+
 management:
   endpoints.web.exposure.include: refresh
