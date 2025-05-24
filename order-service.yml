@@ -17,7 +17,7 @@ spring:
   flyway:
     user: ${spring.r2dbc.username}
     password: ${spring.r2dbc.password}
-    url: jdbc:postgresql://postgres/polar-orders
+    url: jdbc:postgresql://postgres/polar_orders
 
 management:
   endpoints.web.exposure.include: refresh
