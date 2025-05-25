@@ -21,6 +21,7 @@ spring:
 
 app:
   version: "order-api-v1"
+  catalogService: "http://catalog-service"
 
 management:
   endpoints.web.exposure.include: refresh
