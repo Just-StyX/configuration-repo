@@ -26,3 +26,18 @@ spring:
 
 management:
   endpoints.web.exposure.include: refresh
+
+springdoc:
+  swagger-ui.path: /openapi/swagger-ui.html
+  api-docs.path: /openapi/v3/api-docs
+  packagesToScan: jsl.group.catalog_service
+  pathsToMatch: /**
+  cache.disable: true
+
+# TODO: security to be considered later
+#  swagger-ui:
+#    oauth2-redirect-uri: /swagger-ui/oauth2-redirect.html
+#    oauth:
+#      clientId:
+#      clientSecret:
+#      useBasicAuthenticationWithAccessCodeGrant: true
