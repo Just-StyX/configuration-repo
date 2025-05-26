@@ -52,6 +52,10 @@ spring:
             - name: CircuitBreaker
               args:
                 name: orderCircuitBreaker
+        - id: polar-rabbitmq
+          uri: ${POLAR_RABBITMQ_URL:http//polar-rabbitmq}
+          predicates:
+            - Path=/rabbitmq/**
   data:
     redis:
       connect-timeout: 2s
