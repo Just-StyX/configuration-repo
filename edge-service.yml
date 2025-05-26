@@ -62,7 +62,7 @@ spring:
     store-type: redis
     timeout: 10m
     redis:
-      namespace: polar:edge
+      namespace: edge:redis
 
 resilience4j:
   circuitbreaker:
