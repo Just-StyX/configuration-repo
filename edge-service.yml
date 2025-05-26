@@ -73,3 +73,6 @@ resilience4j:
 logging:
   level:
     io.github.resilience4j: DEBUG
+
+management:
+  endpoints.web.exposure.include: refresh
