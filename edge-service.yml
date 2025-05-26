@@ -54,7 +54,7 @@ spring:
                 name: orderCircuitBreaker
   redis:
     connect-timeout: 2s
-    host: localhost
+    host: edge-redis
     port: 6379
     timeout: 1s
   session:
