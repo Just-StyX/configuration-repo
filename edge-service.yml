@@ -9,6 +9,7 @@ spring:
   cloud:
     gateway:
       default-filters:
+        - SaveSession
         - name: RequestRateLimiter
           args:
             redis-rate-limiter:
@@ -56,6 +57,11 @@ spring:
     host: redis
     port: 6379
     timeout: 1s
+  session:
+    store-type: redis
+    timeout: 10m
+    redis:
+      namespace: polar:edge
 
 resilience4j:
   circuitbreaker:
