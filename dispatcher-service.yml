@@ -1,0 +1,20 @@
+server:
+  port: 9003
+
+spring:
+  cloud:
+    function:
+      definition: pack|label
+    stream:
+      bindings:
+        packlabel-in-0:
+          destination: order-accepted
+          group: ${spring.application.name}
+        packlabel-out-0:
+          destination: order-dispatched
+  rabbitmq:
+    host: polar-rabbitmq
+    port: 5672
+    username: username
+    password: password
+    connection-timeout: 5s
