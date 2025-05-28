@@ -15,6 +15,6 @@ spring:
   rabbitmq:
     host: polar-rabbitmq
     port: 5672
-    username: username
-    password: password
+    username: guest
+    password: guest
     connection-timeout: 5s
