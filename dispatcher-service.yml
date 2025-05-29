@@ -6,15 +6,16 @@ spring:
     function:
       definition: pack|label
     stream:
+      default.contentType: application/json
       bindings:
         packlabel-in-0:
           destination: order-accepted
-          group: ${spring.application.name}
+          group: dispatcher-service
         packlabel-out-0:
           destination: order-dispatched
   rabbitmq:
     host: polar-rabbitmq
-    port: 5672
+#    port: 5672
     username: guest
     password: guest
 #    connection-timeout: 5s

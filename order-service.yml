@@ -25,7 +25,7 @@ spring:
       bindings:
         dispatchOrder-in-0:
           destination: order-dispatched
-          group: ${spring.application.name}
+          group: order-service
         acceptedOrder-out-0:
           destination: order-accepted
       rabbit:
@@ -35,7 +35,7 @@ spring:
               transacted: true
   rabbitmq:
     host: polar-rabbitmq
-    port: 5672
+#    port: 5672
     username: guest
     password: guest
 #    connection-timeout: 5s
