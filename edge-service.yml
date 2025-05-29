@@ -74,7 +74,7 @@ spring:
             scope: openid
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/realms/PolarBookshop # TODO: change host and remove port when running in kubernetes
+            issuer-uri: http://host.docker.internal:8080/realms/PolarBookshop # TODO: change host and remove port when running in kubernetes
 
 resilience4j:
   circuitbreaker:
