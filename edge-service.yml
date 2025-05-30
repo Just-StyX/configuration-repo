@@ -66,6 +66,9 @@ spring:
       namespace: edge:redis
   security:
     oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://polar-keycloak:8080/realms/PolarBookshop # TODO: remove port when running in kubernetes
       client:
         registration:
           keycloak:
