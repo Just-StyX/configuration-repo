@@ -49,7 +49,7 @@ spring:
               args:
                 name: catalogCircuitBreaker
                 fallbackUri: forward:/catalog-fallback
-        - id: auth-server
+        - id: auth-route
           uri: http://services/login/oauth2/code/keycloak
           predicates:
             - Path=/login/**
