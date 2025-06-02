@@ -49,6 +49,10 @@ spring:
               args:
                 name: catalogCircuitBreaker
                 fallbackUri: forward:/catalog-fallback
+        - id: auth-server
+          uri: http://edge-service/login/oauth2/code/keycloak
+          predicates:
+            - Path=/login/oauth2/code/keycloak
         - id: order-route
           uri: ${ORDER_SERVICE_URL:http://order-service}/orders
           predicates:
