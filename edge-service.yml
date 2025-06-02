@@ -9,7 +9,7 @@ spring:
   cloud:
     gateway:
       default-filters:
-        - TokenRelay=
+        - TokenRelay
         - SaveSession
         - name: RequestRateLimiter
           args:
