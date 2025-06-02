@@ -23,6 +23,11 @@ spring:
     hikari:
       connection-timeout: 2000
       maximum-pool-size: 5
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://polar-keycloak/realms/PolarBookshop
 
 management:
   endpoints.web.exposure.include: refresh
