@@ -39,6 +39,11 @@ spring:
     username: guest
     password: guest
     connection-timeout: 5s
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://polar-keycloak/realms/PolarBookshop
 
 app:
   version: "order-api-v1"
