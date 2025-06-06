@@ -30,7 +30,22 @@ spring:
           issuer-uri: http://polar-keycloak/realms/PolarBookshop
 
 management:
-  endpoints.web.exposure.include: refresh
+  endpoints.web.exposure.include: refresh, health, metrics, prometheus
+  metrics.tag.application: ${spring.application.name}
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+    probes:
+      enabled: true
+    group:
+      readiness:
+        include: readinessState,redis
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
 
 springdoc:
   swagger-ui.path: /openapi/swagger-ui.html
